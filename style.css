@@ -1,0 +1,289 @@
+body{
+	box-sizing: border-box;
+}
+*{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	text-decoration:none;
+}
+.container {
+	margin: 0 auto ;
+	width:960px ;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 80vh;
+	padding: 20px;
+}
+.card {
+	
+		display: inline-block;
+		width: 5em;
+		height: 8em;
+		border: 1px solid #666;
+		border-radius: .3em;
+		-moz-border-radius: .3em;
+		-webkit-border-radius: .3em;
+		-khtml-border-radius: .3em;
+		padding: .25em;
+		margin: 0 .5em .5em 0;
+		text-align: center;
+		font-size: 25px; 
+		font-weight: normal;
+		font-family: Arial, sans-serif;
+		position: relative;
+		background-color: #fff;
+		-moz-box-shadow: .2em .2em .5em #333;
+		-webkit-box-shadow: .2em .2em .5em #333;
+		box-shadow: .2em .2em .5em #333;
+	}
+.card-0,.card-1{
+	display: block;
+	width: 100%;
+	height: 100%;
+	content: '';
+}
+#btn{
+	padding: 10px;
+	color: seashell;
+	background-color: sienna;
+}
+.ran0,.ran1{
+	position: absolute;
+	left:5px;
+	bottom: 5px;
+}
+.suit:after {
+    display: block;
+    margin-top: 1.75em;
+    text-align: center;
+    white-space: pre;
+    line-height: .9;
+    font-size: 1.1em;
+    word-spacing: 0em;
+}
+/*suit color */
+ .diams {
+    color: #f00 !important;
+}
+
+ .hearts {
+    color: #f00 !important;
+}
+ .spades {
+    color: #000 !important;
+}
+
+ .clubs {
+    color: #000 !important;
+}
+
+ .joker {
+    color: #000 !important;
+}
+ .card.joker.big {
+    color: #f00 !important;
+}
+/* diamonds */
+ .rank-2.diams .suit:after {
+    content: "\2666 \A\A\2666";
+}
+ .rank-3.diams .suit:after {
+    content: "\2666 \A\2666 \A\2666";
+}
+ .rank-4.diams .suit:after {
+    content: "\2666\00A0\00A0\00A0\2666 \A\A\2666\00A0\00A0\00A0\2666";
+}
+ .rank-5.diams .suit:after {
+    content: "\2666\00A0\00A0\00A0\2666 \A\2666 \A\2666\00A0\00A0\00A0\2666";
+}
+ .rank-6.diams .suit:after {
+    content: "\2666\00A0\00A0\00A0\2666 \A\2666\00A0\00A0\00A0\2666 \A\2666\00A0\00A0\00A0\2666";
+}
+ .rank-7.diams .suit:after {
+    content: "\2666\00A0\00A0\2666 \A\2666\00A0\2666\00A0\2666 \A\2666\00A0\00A0\2666";
+}
+ .rank-8.diams .suit:after {
+    content: "\2666\00A0\2666\00A0\2666 \A\2666\00A0\00A0\2666 \A\2666\00A0\2666\00A0\2666";
+}
+ .rank-9.diams .suit:after {
+    content: "\2666\00A0\2666\00A0\2666 \A\2666\00A0\2666\00A0\2666 \A\2666\00A0\2666\00A0\2666";
+}
+ .rank-10.diams .suit:after {
+    content: "\2666\00A0\2666\00A0\2666 \A\2666\00A0\2666\00A0\2666\00A0\2666 \A\2666\00A0\2666\00A0\2666";
+}
+
+/* hearts */
+ .rank-2.hearts .suit:after {
+    content: "\2665 \A\A\2665";
+}
+ .rank-3.hearts .suit:after {
+    content: "\2665 \A\2665 \A\2665";
+}
+ .rank-4.hearts .suit:after {
+    content: "\2665\00A0\00A0\00A0\2665 \A\A\2665\00A0\00A0\00A0\2665";
+}
+ .rank-5.hearts .suit:after {
+    content: "\2665\00A0\00A0\00A0\2665 \A\2665 \A\2665\00A0\00A0\00A0\2665";
+}
+ .rank-6.hearts .suit:after {
+    content: "\2665\00A0\00A0\00A0\2665 \A\2665\00A0\00A0\00A0\2665 \A\2665\00A0\00A0\00A0\2665";
+}
+ .rank-7.hearts .suit:after {
+    content: "\2665\00A0\00A0\2665 \A\2665\00A0\2665\00A0\2665 \A\2665\00A0\00A0\2665";
+}
+ .rank-8.hearts .suit:after {
+    content: "\2665\00A0\2665\00A0\2665 \A\2665\00A0\00A0\2665 \A\2665\00A0\2665\00A0\2665";
+}
+ .rank-9.hearts .suit:after {
+    content: "\2665\00A0\2665\00A0\2665 \A\2665\00A0\2665\00A0\2665 \A\2665\00A0\2665\00A0\2665";
+}
+ .rank-10.hearts .suit:after {
+    content: "\2665\00A0\2665\00A0\2665 \A\2665\00A0\2665\00A0\2665\00A0\2665 \A\2665\00A0\2665\00A0\2665";
+}
+
+/* spades */
+ .rank-2.spades .suit:after {
+    content: "\2660 \A\A\2660";
+}
+ .rank-3.spades .suit:after {
+    content: "\2660 \A\2660 \A\2660";
+}
+ .rank-4.spades .suit:after {
+    content: "\2660\00A0\00A0\00A0\2660 \A\A\2660\00A0\00A0\00A0\2660";
+}
+ .rank-5.spades .suit:after {
+    content: "\2660\00A0\00A0\00A0\2660 \A\2660 \A\2660\00A0\00A0\00A0\2660";
+}
+ .rank-6.spades .suit:after {
+    content: "\2660\00A0\00A0\00A0\2660 \A\2660\00A0\00A0\00A0\2660 \A\2660\00A0\00A0\00A0\2660";
+}
+ .rank-7.spades .suit:after {
+    content: "\2660\00A0\00A0\2660 \A\2660\00A0\2660\00A0\2660 \A\2660\00A0\00A0\2660";
+}
+ .rank-8.spades .suit:after {
+    content: "\2660\00A0\2660\00A0\2660 \A\2660\00A0\00A0\2660 \A\2660\00A0\2660\00A0\2660";
+}
+ .rank-9.spades .suit:after {
+    content: "\2660\00A0\2660\00A0\2660 \A\2660\00A0\2660\00A0\2660 \A\2660\00A0\2660\00A0\2660";
+}
+ .rank-10.spades .suit:after {
+    content: "\2660\00A0\2660\00A0\2660 \A\2660\00A0\2660\00A0\2660\00A0\2660 \A\2660\00A0\2660\00A0\2660";
+}
+
+/* clubs */
+ .rank-2.clubs .suit:after {
+    content: "\2663 \A\A\2663";
+}
+ .rank-3.clubs .suit:after {
+    content: "\2663 \A\2663 \A\2663";
+}
+ .rank-4.clubs .suit:after {
+    content: "\2663\00A0\00A0\00A0\2663 \A\A\2663\00A0\00A0\00A0\2663";
+}
+ .rank-5.clubs .suit:after {
+    content: "\2663\00A0\00A0\00A0\2663 \A\2663 \A\2663\00A0\00A0\00A0\2663";
+}
+ .rank-6.clubs .suit:after {
+    content: "\2663\00A0\00A0\00A0\2663 \A\2663\00A0\00A0\00A0\2663 \A\2663\00A0\00A0\00A0\2663";
+}
+ .rank-7.clubs .suit:after {
+    content: "\2663\00A0\00A0\2663 \A\2663\00A0\2663\00A0\2663 \A\2663\00A0\00A0\2663";
+}
+ .rank-8.clubs .suit:after {
+    content: "\2663\00A0\2663\00A0\2663 \A\2663\00A0\00A0\2663 \A\2663\00A0\2663\00A0\2663";
+}
+ .rank-9.clubs .suit:after {
+    content: "\2663\00A0\2663\00A0\2663 \A\2663\00A0\2663\00A0\2663 \A\2663\00A0\2663\00A0\2663";
+}
+ .rank-10.clubs .suit:after {
+    content: "\2663\00A0\2663\00A0\2663 \A\2663\00A0\2663\00A0\2663\00A0\2663 \A\2663\00A0\2663\00A0\2663";
+}
+.rank-j .suit:after,
+.rank-q .suit:after,
+.rank-k .suit:after {
+    content: '';
+}
+.rank-j,.rank-q,.rank-k,.joker { 
+	background-position: 15px 0px;
+	background-size: 100px 200px;
+	padding:100px 30px;
+	background-repeat: no-repeat;
+}
+ .rank-j.diams  {
+	background-image: url(./faces/JD.gif); }
+ .rank-j.hearts {  
+	background-image: url(./faces/JH.gif); }
+ .rank-j.spades {
+	 background-image: url(./faces/JS.gif); }
+ .rank-j.clubs  {
+	 background-image: url(./faces/JC.gif); }
+ .rank-q.diams  { 
+	 background-image: url(./faces/QD.gif); }
+ .rank-q.hearts { 
+	 background-image: url(./faces/QH.gif); }
+ .rank-q.spades {
+	 background-image: url(./faces/QS.gif); }
+ .rank-q.clubs  {
+	 background-image: url(./faces/QC.gif); }
+ .rank-k.diams  {
+	  background-image: url(./faces/KD.gif); }
+ .rank-k.hearts {
+	 background-image: url(./faces/KH.gif); }
+ .rank-k.spades {
+	  background-image: url(./faces/KS.gif); }
+ .rank-k.clubs  {
+	  background-image: url(./faces/KC.gif); }
+ /* face in middle */
+ 
+/* .card.rank-j .suit:after,
+ .card.rank-q .suit:after,
+ .card.rank-k .suit:after,
+ .card.rank-a .suit:after,
+ .card.joker .rank:after {
+    font-family: Georgia, serif;
+    position: absolute;
+    font-size: 3em;
+    right:0;
+    bottom:0em;
+    word-spacing: normal;
+    letter-spacing: normal;
+    line-height: 1;
+} */
+ /* .rank-j .suit:after {
+    content: "\265F";
+    right: .15em;
+} */
+/* .card.rank-q .suit:after {
+    content: "\265B";
+}
+ .card.rank-k .suit:after {
+    content: "\265A";
+} */
+
+ /* big suits in middle */
+ .rank-a .suit:after {
+    font-family: Arial, sans-serif;
+    line-height: .9;
+	bottom:5px ;
+	font-size: 5rem;
+	margin-top: .75em;
+}
+ .rank-a.diams .suit:after {
+    content: "\2666";
+    right: 2px;
+}
+ .rank-a.hearts .suit:after {
+    content: "\2665";
+    right:2px ;
+}
+ .rank-a.spades .suit:after {
+    content: "\2660";
+    right: 2px;
+}
+ .rank-a.clubs .suit:after {
+    content: "\2663";
+	right: 2px;
+	
+}
