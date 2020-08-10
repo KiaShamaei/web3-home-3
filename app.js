@@ -24,20 +24,17 @@ function getSuit(){
 }
 //get new card after shuffel (number or face of cards)
 function getCards(){
-//reset class 
- 
  for(var n=0 ; n <= player.length ; n++){
-	var str = ".card-" + n ;
+	var str = n ;
 	var deckN = card[n] ;
 	var suitN = getSuit();
 	var classN = "rank-"+card[n];
-	var inner1 = document.querySelector('.ran' + n);
-	var html = document.querySelector(str);
-	html.className = '';
-	// console.log(html)
-	// html.innerHTML  = output;
+	var inner1 = document.getElementById('ran' + n);
+	var html = document.getElementById(str);
+	if (html){
+	html.className = "";
 	html.className +=" "+classN+" "+suitN ;
-	inner1.innerHTML= card[n] + "&"+suitN +';';
+	inner1.innerHTML= card[n] + "&"+suitN +';';}
 	 
   }
 }
@@ -50,5 +47,7 @@ function deal(){
 }
 
 var btn = document.getElementById('btn') ;
-btn.onclick = function (){deal()};
+btn.onclick = function (){
+	event.preventDefault();
+	deal()};
 
